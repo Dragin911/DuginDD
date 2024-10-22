@@ -1,0 +1,54 @@
+# Исходный список целых чисел
+numbers = [2, -93, -2, 8, None, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
+
+# Находим индекс пропущенного элемента
+missing_index = numbers.index(None)
+
+sum_of_numbers = sum(num for num in numbers if num is not None)
+
+count_of_numbers = len(numbers)
+
+average = sum_of_numbers / (count_of_numbers - 1)
+
+numbers[missing_index] = average
+
+print('Измененный список: ', average)
+
+
+
+____________________________________________________
+
+# Параметры книги
+pages_in_book = 100          # Количество страниц в книге
+lines_per_page = 50          # Число строк на странице
+characters_per_line = 25     # Количество символов в строке
+bytes_per_character = 4      # Объем памяти для одного символа (в байтах)
+
+floppy_disk_size_mb = 1.44   # Объем дискеты в Мб
+floppy_disk_size_bytes = int(floppy_disk_size_mb * 1024 * 1024)  # Перевод в байты
+
+book_size_bytes = (pages_in_book * lines_per_page * characters_per_line * bytes_per_character)
+
+number_of_books = floppy_disk_size_bytes // book_size_bytes
+
+print(f"Количество книг, помещающихся на дискету: {number_of_books}")
+
+___________________________________________________
+
+
+
+# Список игроков
+list_players = ["Маша", "Петя", "Саша", "Оля", "Кирилл", "Коля"]
+
+
+total_players = len(list_players)
+
+
+middle_index = total_players // 2
+
+first_team = list_players[:middle_index]
+second_team = list_players[middle_index:]
+
+
+print(first_team)
+print(second_team)
